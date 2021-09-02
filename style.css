@@ -1,0 +1,93 @@
+body {
+  background-color: #111;
+  overflow: hidden;
+}
+
+@-webkit-keyframes BOBBING {
+  0% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+  100% {
+    -webkit-transform: scale(120%);
+            transform: scale(120%);
+  }
+}
+
+@keyframes BOBBING {
+  0% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+  100% {
+    -webkit-transform: scale(120%);
+            transform: scale(120%);
+  }
+}
+
+@-webkit-keyframes FadeOut {
+  0% {
+    color: #555f;
+  }
+  100% {
+    color: #5550;
+  }
+}
+
+@keyframes FadeOut {
+  0% {
+    color: #555f;
+  }
+  100% {
+    color: #5550;
+  }
+}
+
+#cont {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+h1 {
+  font-family: 'Hina Mincho', serif;
+  position: relative;
+  top: 35vh;
+  -webkit-animation: BOBBING 1s infinite;
+          animation: BOBBING 1s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  color: #aaa;
+  z-index: 1;
+  visibility: hidden;
+}
+
+body h2 {
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  margin: 5px;
+  color: #5550;
+  z-index: 1;
+  -webkit-animation: FadeOut 15s ease-in;
+          animation: FadeOut 15s ease-in;
+}
+
+div h2 {
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  color: #ddd;
+  z-index: 1;
+  top: 1vh;
+  -webkit-animation: none;
+          animation: none;
+}
+/*# sourceMappingURL=style.css.map */
